@@ -1,0 +1,92 @@
+body{
+    top: 0;
+}
+.bg{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+.frontmiddle{
+    width: 350px;
+    height: 400px;
+    color: white;
+    margin: 0px;
+    padding: 150px 0px 50px 0px ;
+}
+.frontmiddle h1{
+    font-size: 55px;
+}
+.btn{
+    width: 200px;
+    height: 35px;
+    font-size: 21px;    
+    outline: none;
+    border: none;
+    padding:10px 0px 35px 0px;
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px 0px 20px 0px;
+    background-color: rgb(255, 68, 0);
+    color: white;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(201, 83, 40);
+}
+.frontmiddle p{
+    margin: 70px 0px 0px 0px ;
+    font-size: 18px;
+}
+.logo{
+    width: 250px;
+    height: 100px; 
+    margin: 20px 0px 0px 0px ; 
+}
+.disp1{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+.disp1 li{
+    font-size: 22px;
+}
+.s1{
+    width: 320px;
+    height:320px ;
+}
+.btn1{
+    width: 230px;
+    height: 35px;
+    font-size: 18px;   
+    outline: none;
+    border: none;
+    padding:10px 0px 35px 0px;
+    border-radius: 8px 8px 8px 8px;
+    background-color: rgb(250, 102, 49);
+}
+.btn1:hover{
+    cursor: pointer;
+    background-color: rgb(223, 74, 20);
+}
+.footer{
+    display: flex;
+    justify-content: left;
+    margin: 0px 0px 0px 500px;
+    
+}
+.footer p{
+    padding: 0px 20px 0px 20px;
+}
+.footer p:hover{
+    cursor: pointer;
+}
+.disp1 a,.frontmiddle a{
+    color: white;
+}
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
