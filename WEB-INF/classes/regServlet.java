@@ -12,16 +12,17 @@ public class regServlet extends HttpServlet
 		String s3 = request.getParameter("u3");
 		String s4 = request.getParameter("u4");
 		PrintWriter out = response.getWriter();
-		out.println("<html>");
+		out.println("<html><body>");
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clg_project","root","root");
 			Statement st = con.createStatement();
 			
-			String q ="insert into registereduser values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"') ";
+			String q ="insert into registereduser values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"'); ";
 		    st.executeUpdate(q);
             
-            response.sendRedirect("Login.html");			
+			out.println("tikkk");
+            //response.sendRedirect("Login.html");			
 			
 			con.close();
 		}
