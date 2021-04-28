@@ -10,13 +10,13 @@ public class loginServlet extends HttpServlet
 		String s1 = request.getParameter("u1");
 		String s2 = request.getParameter("u2");
 		PrintWriter out = response.getWriter();
-		out.println("<html>");
+		out.println("<html><body>");
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clg_project","root","root");
 			Statement st = con.createStatement();
 
-            String q = "select * from registereduser where (NAME='"+s1+"' AND PASSWORD='"+s2+"') ";
+            String q = "select * from registereduser where (EMAIL='"+s1+"' AND PASSWORD='"+s2+"') ";
 			
 			ResultSet rs = st.executeQuery(q);
 		
@@ -25,7 +25,7 @@ public class loginServlet extends HttpServlet
 				 response.sendRedirect("Home2.html");			
 			}
 		    else{
-			 response.sendRedirect("Home.html");			
+			 response.sendRedirect("Login.html");			
 		    }
 			
 			con.close();

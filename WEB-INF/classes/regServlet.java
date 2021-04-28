@@ -18,11 +18,11 @@ public class regServlet extends HttpServlet
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clg_project","root","root");
 			Statement st = con.createStatement();
 			
-			String q ="insert into registereduser values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"'); ";
+			String q ="insert into registereduser values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"') ";
 		    st.executeUpdate(q);
             
 			out.println("tikkk");
-            //response.sendRedirect("Login.html");			
+            response.sendRedirect("Login.html");			
 			
 			con.close();
 		}
