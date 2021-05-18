@@ -22,7 +22,7 @@ public class loginServlet extends HttpServlet
 		
 			if(rs.next())
 			{
-				 response.sendRedirect("Home2.html");			
+				 response.sendRedirect("Home2.jsp");			
 			}
 		    else{
 			 response.sendRedirect("Login.html");			

@@ -1,0 +1,88 @@
+body{
+    background-image: url("adminbg.jpg");
+}
+.main{
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    height: 500px;
+    margin: 75px 0px 0px 275px;
+    border-radius: 7px;
+    box-shadow:5px 5px 40px 10px grey;
+    }
+    .part1{
+        margin-top: 200px;
+    }
+    h1 , h2 {
+    text-shadow: 2px 2px 5px red;
+    }
+    .vl {
+    margin-top: 75px;
+    border-left: 3px solid rgb(219, 226, 219);
+    height: 350px;
+    }
+    .part2{
+        margin-top: 85px;
+    }
+    .input{
+        margin: 10px 50px 10px 0px;
+        width: 250px;
+        height: 30px;
+        padding: 0px 0px 0px 5px;
+        font-size: 15px;
+        border-radius: 2px;
+        border: none;
+        outline: none;    
+    }
+    .ip3{
+        margin: 50px 0px 0px 40px;
+        width: 175px;
+    }
+    .part2 h2, .part2 p{
+        text-align: center;
+        margin-right: 50px;
+    }
+    .menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: right;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.menu ul li {
+    display: inline-block;
+    padding: 12px;
+    margin-left: 5vh;
+}
+
+.menu ul li:hover {
+    cursor: pointer;
+    background-color: blue;
+}
+
+.data {
+    margin-top: 100px;
+}
+
+table {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: 2px 2px 10px 10px black;
+}
+
+.B {
+    background: linear-gradient(green, red, );
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+.B:hover {
+    padding: 10px;
+    background: linear-gradient(black, red, yellow);
+    color: white;
+}

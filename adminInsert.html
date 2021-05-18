@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Student data</title>
+    <link rel="stylesheet" href="adminlogin.css">
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="adminMenu.html">Home</a></li>
+            <li><a href="adminInsert.html">Insert</a></li>
+            <li><a href="adminShowAll">AllBooks</a></li>
+            <li><a href='paidShowAll'>PaidBooks</a></li>
+            <li><a href="adminDelete.html">Delete</a></li>
+            <li><a href="adminAllUser">AllUser</a></li>
+            <li><a href="adminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="data">
+        <center>
+            <form action="adminInsert">
+                <table cellpadding="12px">
+                    <tr>
+                        <td>Serial N</td>
+                        <td><input type="text" placeholder="SerialNumber" name="u1"></td>
+                    </tr>
+                    <tr>
+                        <td>Book Name</td>
+                        <td><input type="text" placeholder="Book Name" name="u2"></td>
+                    </tr>
+                    <tr>
+                        <td>Book Link</td>
+                        <td><input type="text" placeholder="Book Link" name="u3"></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>Image Link</td>
+                        <td><input type="text" placeholder="Image Link" name="u4"></td>
+                    </tr>
+                    <tr>
+                        <td>Insert Into</td>
+                        <td><input type="radio" value="free" name="u5"> Free <input type="radio" value="paid" name="u5"> Paid </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><input type="submit" value=" Insert " class="B"></th>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>
