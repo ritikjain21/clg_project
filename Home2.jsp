@@ -8,7 +8,17 @@
             "jdbc:mysql://localhost:3306/clg_project?allowPublicKeyRetrieval=true&useSSL=false",
             "root", "root");
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery("SELECT * FROM paidbooks");
+        ResultSet rs =null;
+        String srchbar = request.getParameter("srchbar");
+        if(srchbar==null || srchbar.trim().equals(""))
+        {
+            rs = st.executeQuery("SELECT * FROM paidbooks");
+        }
+        else
+        {
+            rs=st.executeQuery("SELECT * FROM paidbooks where (AUTHOR = '"+srchbar+"' or NAME= '"+srchbar+"') ");
+        }
+
     %>
 <head>
     <meta charset="UTF-8">
@@ -26,24 +36,36 @@
     <div class="homeheader">
         <img class="logo" src="logo.png" alt="logo">
         <div>
-            <input type="text" placeholder="search" id="headsearch"><button class="serchbtn"><i class="fas fa-search"></i></button>
+            <form action="Home2.jsp">
+            <input type="text" placeholder="search" id="headsearch" name="srchbar"><button type="submit" name="srchbtn" class="serchbtn"><i class="fas fa-search"></i></button>
+            </form>
         </div>
-        <button class="btn">Profile</button>
+        <button class="btn"><a href="profile2.html">Profile</a></button>
         <button class="btn"><a href="front.html">Logout</a></button>
     </div>
     <hr>
     <div class="hpstore">
 
         <%
-            while(rs.next())
+            if(rs.next() == false)
             {
-        %>
-        <div class="store">
-            <img class="image" src="<%= rs.getString(4) %>" alt="logo">
-            <button class="read"><a href="<%= rs.getString(3) %>">Read</a></button>
-        </div>
-        <%
+                %>
+                    <h2>No Books Found from the Name or Author Given...</h2>
+                <%
             }
+            else
+            {
+            do
+            {
+                %>
+                <div class="store">
+                    <img class="image" src="<%= rs.getString(4) %>" alt="logo">
+                    <button class="read"><a href="<%= rs.getString(3) %>">Read</a></button>
+                </div>
+                <%
+            }
+            while(rs.next());
+        }
         %>
         <!-- <div class="store">
             <img class="image" src="Home2/m2.jpg" alt="logo">

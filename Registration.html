@@ -2,6 +2,38 @@
 
 <head>
     <link rel="stylesheet" href="login2.css">
+
+    
+    <script>
+        function validateForm(frm)
+        {
+                let nn=frm.name.value.trim();
+                if(nn.length==0){
+                        alert("Name required");
+                        frm.name.focus();
+                        return false;
+                }
+                let mm=frm.contact.value.trim();
+                if(mm.length==0){
+                        alert("Contact required");
+                        frm.contact.focus();
+                        return false;
+                }
+                let oo=frm.login.value.trim();
+                if(oo.length==0){
+                        alert("Email required");
+                        frm.login.focus();
+                        return false;
+                }
+                let pp=frm.password.value.trim();
+                if(pp.length==0){
+                        alert("Password required");
+                        frm.password.focus();
+                        return false;
+                }
+                return true;
+        }
+</script>
 </head>
 
 <body>
@@ -16,15 +48,15 @@
         <div class="account">
             <p>Create Account Here</p>
         </div>
-        <form action="regis" method="GET">
-            <div class="formclass">
+        <div class="formclass">
+            <form action="regis" method="GET" onsubmit="return validateForm(this)" >
                 <input type="text" id="name" class="fadeIn secondfourth" name="u1" placeholder="Name" /><br>
                 <input type="text" id="contact" class="fadeIn secondfivth" name="u2" placeholder="Contact" /><br>
                 <input type="email" id="login" class="fadeIn second" name="u3" placeholder="Email" /><br>
                 <input type="password" id="password" class="fadeIn third" name="u4" placeholder="Password" /><br>
                 <input type="submit" class="fadeIn fourth" value="SignIn" />
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 

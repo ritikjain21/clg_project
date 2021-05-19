@@ -2,6 +2,19 @@
 
 <head>
         <link rel="stylesheet" href="login2.css">
+
+        <script>
+                function validateForm(frm)
+                {
+                        var nn=frm.password.value.trim();
+                        if(nn.length==0){
+                                alert("password required");
+                                frm.password.focus();
+                                return false;
+                        }
+                        return true;
+                }
+        </script>
 </head>
 
 <body>
@@ -12,10 +25,10 @@
                         <a href="Registration.html"><h2 class="inactive underlineHover">Sign Up </h2></a>
                 </div>
                 <div class="first">
-                        <img src="user.png" id="icon" alt="User Icon" />
+                        <img src="/usedImage/user.png" id="icon" alt="User Icon" />
                 </div>
                 <div class="formclass">
-                        <form action="login" method="POST">
+                        <form action="login" method="POST" onsubmit="return validateForm(this)">
                                 <input type="email" id="login" class="fadeIn second" name="u1"
                                         placeholder="Email" /><br>
                                 <input type="password" id="password" class="fadeIn third" name="u2"

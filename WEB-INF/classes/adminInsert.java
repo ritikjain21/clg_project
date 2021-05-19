@@ -11,6 +11,7 @@ public class adminInsert extends HttpServlet
 		String s2 = request.getParameter("u2");
 		String s3 = request.getParameter("u3");
 		String s4 = request.getParameter("u4");
+		String s6 = request.getParameter("u6");
 		String s5 = request.getParameter("u5");
 		String tableName = "";
 		if(s5.equals("free"))
@@ -32,7 +33,7 @@ public class adminInsert extends HttpServlet
 			
 			Statement st = con.createStatement();
 			
-			String q ="insert into "+tableName+" values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"')";
+			String q ="insert into "+tableName+" values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s6+"')";
 			
 			st.executeUpdate(q);
 			if(s5.equals("free"))

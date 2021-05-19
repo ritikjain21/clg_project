@@ -20,9 +20,10 @@ public class regServlet extends HttpServlet
 			
 			String q ="insert into registereduser values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"') ";
 		    st.executeUpdate(q);
-            
-			out.println("tikkk");
-            response.sendRedirect("Login.html");			
+            	
+			
+			response.sendRedirect("Login.html");	
+            			
 			
 			con.close();
 		}
