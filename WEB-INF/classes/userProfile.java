@@ -3,9 +3,9 @@ import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-public class regServlet extends HttpServlet
+public class userProfile extends HttpServlet
 {
-	public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException
+	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException
 	{
 		String s1 = request.getParameter("u1");
 		String s2 = request.getParameter("u2");
@@ -21,18 +21,16 @@ public class regServlet extends HttpServlet
 			String q ="insert into registereduser values ('"+s1+"','"+s2+"','"+s3+"','"+s4+"') ";
 		    st.executeUpdate(q);
             	
-			
-			response.sendRedirect("Login.html");	
-            			
-			
 			con.close();
 		}
 		catch(Exception e)
 		{
-			response.sendRedirect("Registration.jsp?u1="+s1+"&u2="+s2+"&u3="+s3+"&error=Email already exists");
 			out.println(e);
 		}
 		out.println("</body>");
 		out.println("</html>");
 	}
 }
+
+//set classpath=C:\Program Files\Apache Software Foundation\Tomcat 8.5\lib\servlet-api.jar;.;%classpath%
+//javac --release 8 *.java

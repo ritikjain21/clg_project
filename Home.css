@@ -1,5 +1,5 @@
 body{
-    background-image: url(/usedImage/Homebackground.jpg);
+    background-image: url("usedImage/Homebackground.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 100% 100%;
@@ -7,7 +7,7 @@ body{
 .homeheader{
     padding: 5px 0px 6px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0px 0px 20px 0px ;
     font-size: 20px;
 }
@@ -22,6 +22,8 @@ body{
     padding: 0px 0px 0px 5px ;
     font-size: 20px;
     margin: 15px 0px 0px 0px;
+    border-radius: 8px 0px 0px 8px;
+    border: 2px;
 }
 .serchbtn{
     width: 40px;
@@ -29,28 +31,68 @@ body{
     margin: 15px 0px 0px 0px;
     background-color: white;
     border-radius: 0px 8px 8px 0px;
-    border: 2px black;
+    border: 2px;
     font-size: 20px;
 }
 .btn{
-    width: 150px;
-    height: 40px;  
-    border-radius: 5px;
-    margin-top: 15px; 
+    margin-top: 15px;
 }
+.btn a:link, .btn a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn  a:hover, .btn  a:active {
+    background-color: green;
+    color: white;
+  }
+
 .image{
     width: 250px;
-    height: 300px;
+    height: 270px;
+    margin: 10px 0px 0px 15px;
+    border-radius: 4px;
+}
+.author, .bookname{
+    margin:5px 0px 5px 15px ;
+    font-size: 20px;
+}
+.containerstore:hover{
+    box-shadow: 20px 20px 50px 15px grey;
 }
 .store{
     width: 280px;
-    height: 350px;
+    height: 395px;
     margin: 10px 10px;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 10px;
 }
 .read{
-    width: 250px;
-    height: 35px;
+    margin: 0px 0px 0px 15px ;
+    border-radius: 5px;
 }
+
+.read a:link, .read a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 8px 105px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .read a:hover, .read a:active {
+    background-color: green;
+    color: white;
+  }
+
 .hpstore{
     display: flex;
     flex-wrap: wrap;
@@ -76,3 +118,12 @@ body{
     cursor: pointer;
     text-decoration: underline ;
 }
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:black;
+  }
+  

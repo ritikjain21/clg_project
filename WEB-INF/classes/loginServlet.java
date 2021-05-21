@@ -22,7 +22,10 @@ public class loginServlet extends HttpServlet
 		
 			if(rs.next())
 			{
-				 response.sendRedirect("Home2.jsp");			
+				HttpSession session = request.getSession();
+				session.setAttribute("email",s1);
+				response.sendRedirect("Home2.jsp");			
+				session.setMaxInactiveInterval(365*24*60*60);
 			}
 		    else{
 			 response.sendRedirect("Login.html");			

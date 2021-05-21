@@ -42,8 +42,8 @@
             <input type="text" placeholder="search" id="headsearch" name="srchbar"><button type="submit" name="srchbtn" class="serchbtn"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        <button class="btn"><a href="Registration.html">Login/SignUp</a></button>
-        <button class="btn"><a href="front.html">Home</a></button>
+        <div class="btn"><a href="Registration.jsp">Login/SignUp</a></div>
+        <div class="btn"><a href="front.html">Home</a></div>
     </div>
     <hr>
     
@@ -61,8 +61,10 @@
             {
                 %>
                 <div class="store">
-                    <img class="image" src="<%= rs.getString(4) %>" alt="logo">
-                    <button class="read"><a href="<%= rs.getString(3) %>">Read</a></button>
+                        <img class="image" src="<%= rs.getString(4) %>" alt="logo">
+                        <div class="author">Author:<%= rs.getString(5) %> </div>
+                        <div class="bookname">Name:<%= rs.getString(2) %> </div>
+                        <div class="read"><a href="<%= rs.getString(3) %>">Read</a></div>
                 </div>
                 <%
             }

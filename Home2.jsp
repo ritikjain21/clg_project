@@ -1,3 +1,4 @@
+<%@include file="checklogin.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
     <%@ page import = "java.sql.*" %>
@@ -40,8 +41,8 @@
             <input type="text" placeholder="search" id="headsearch" name="srchbar"><button type="submit" name="srchbtn" class="serchbtn"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        <button class="btn"><a href="profile2.html">Profile</a></button>
-        <button class="btn"><a href="front.html">Logout</a></button>
+        <div class="btn"><a href="profile.jsp"  >Profile</a></div>
+        <div class="btn"><a href="Logout.jsp">Logout</a></div>
     </div>
     <hr>
     <div class="hpstore">
@@ -58,9 +59,13 @@
             do
             {
                 %>
+                <div class="containerstore">
                 <div class="store">
                     <img class="image" src="<%= rs.getString(4) %>" alt="logo">
-                    <button class="read"><a href="<%= rs.getString(3) %>">Read</a></button>
+                    <div class="author">Author:<%= rs.getString(5) %> </div>
+                    <div class="bookname">Name:<%= rs.getString(2) %> </div>
+                    <div class="read"><a href="<%= rs.getString(3) %>">Read</a></div>
+                </div>
                 </div>
                 <%
             }

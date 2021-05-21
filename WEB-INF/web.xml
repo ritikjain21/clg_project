@@ -81,4 +81,16 @@
 </servlet-mapping>
 
 
+<servlet>
+<servlet-name>updateProfile</servlet-name>
+<servlet-class>updateProfile</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>updateProfile</servlet-name>
+<url-pattern>/updateProfile</url-pattern>
+</servlet-mapping>
+
+
+
 </web-app>
