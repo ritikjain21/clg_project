@@ -62,22 +62,22 @@ body{
     margin:5px 0px 5px 15px ;
     font-size: 20px;
 }
-.containerstore:hover{
-    box-shadow: 20px 20px 50px 15px grey;
-}
+
 .store{
     width: 280px;
     height: 395px;
-    margin: 10px 10px;
+    margin: 40px 20px 0px 10px;
     background-color: white;
     border: 1.5px solid black;
     border-radius: 10px;
+}
+.store:hover{
+    box-shadow: 2px 2px 15px 15px rgba(82, 79, 79, 0.431);
 }
 .read{
     margin: 0px 0px 0px 15px ;
     border-radius: 5px;
 }
-
 .read a:link, .read a:visited {
     background-color: white;
     color: black;
@@ -96,8 +96,7 @@ body{
 .hpstore{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
-    margin: 30px 0px 0px 0px;
+    justify-content: center;
 }
 
 .footermain{
@@ -127,3 +126,45 @@ a:link {
     color:black;
   }
   
+/* drop down buttons */
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 7px 16px 7px 16px;
+    font-size: 18px;
+    border: 2px solid green;
+    cursor: pointer;
+    margin: 15px 0px 0px 0px ;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    color: white;
+  }

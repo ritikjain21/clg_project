@@ -34,6 +34,10 @@
 </head>
 
 <body>
+  <div class="nav-buttton">
+    <a href="Home2.jsp" >&nbsp;&nbsp;Back&nbsp;&nbsp; </a>
+    <a href="Logout.jsp" >Logout</a>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
@@ -81,23 +85,20 @@
                     <i class="fa fa-envelope"></i>
                   </div>
                   <div class="list-details">
-                    <span id="pCity"><% 
-                      if(rs.getString(6)!=null ) out.println(rs.getString(6)+", ");
-                      if(rs.getString(7)!=null ) out.println(rs.getString(7));
-                      %></span>
-                    <small>City</small>
+                    <span id="pCity"><% if(rs.getString(6)!=null ) out.println(rs.getString(6)); %> </span>
+                  <small>City</small>
                   </div>
                 </li>
-
-
+                
                 <li class="list-group-item">
                   <div class="list-icon">
-                    <i class="fa fa-globe"></i>
+                    <i class="fa fa-envelope"></i>
                   </div>
-                  <!-- <div class="list-details">
-                            <span>www.example.com</span>
-                            <small>Website Address</small>
-                          </div> -->
+                  <div class="list-details">
+                    <span id="pState">
+                      <% if(rs.getString(7)!=null ) out.println(rs.getString(7));%> </span>
+                  <small>State</small>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -108,8 +109,8 @@
       <div class="col-lg-8">
         <div class="card z-depth-3">
           <div class="card-body">
-            <ul class="nav nav-pills nav-pills-primary nav-justified">
 
+            <ul class="nav nav-pills nav-pills-primary nav-justified">
               <li class="nav-item">
                 <a href="javascript:void();" data-target="#edit" data-toggle="pill" class="nav-link"><i
                     class="icon-note"></i> <span class="hidden-xs">Edit</span></a>
@@ -134,7 +135,7 @@
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">Email</label>
                   <div class="col-lg-9">
-                    <input class="form-control" id="textEmail" type="email" name="u3" value='<%= rs.getString(3) %>'readonly>
+                    <input class="form-control  emailip" id="textEmail" type="email" name="u3" value='<%= rs.getString(3) %>'readonly>
                   </div>
                 </div>
                 
@@ -148,17 +149,17 @@
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">Address</label>
                   <div class="col-lg-9">
-                    <input class="form-control" id="textStreet" type="textStreet" value='<%= rs.getString(5) %>' name="u4"
+                    <input class="form-control" id="textStreet" type="textStreet" value='<% if(rs.getString(5)!=null ) out.println(rs.getString(5));%>' name="u4"
                       placeholder="Street">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label"></label>
                   <div class="col-lg-6">
-                    <input class="form-control" id="textCity" type="textCity" value='<%= rs.getString(6) %>' name="u5" placeholder="City">
+                    <input class="form-control" id="textCity" type="textCity" value='<% if(rs.getString(6)!=null ) out.println(rs.getString(6));%>' name="u5" placeholder="City">
                   </div>
                   <div class="col-lg-3">
-                    <input class="form-control" id="textState" type="textState" value='<%= rs.getString(7) %>' name="u6" placeholder="State">
+                    <input class="form-control" id="textState" type="textState" value='<% if(rs.getString(7)!=null ) out.println(rs.getString(7));%>' name="u6" placeholder="State">
                   </div>
                 </div>
                 <div class="form-group row">

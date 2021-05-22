@@ -36,14 +36,26 @@
 
 <body>
     <div class="homeheader">
-        <img class="logo" src="logo.png" alt="logo">
+        <a href="front.html"><img class="logo" src="logo.png" alt="logo"></a>
         <div>
             <form>
             <input type="text" placeholder="search" id="headsearch" name="srchbar"><button type="submit" name="srchbtn" class="serchbtn"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        <div class="btn"><a href="Registration.jsp">Login/SignUp</a></div>
-        <div class="btn"><a href="front.html">Home</a></div>
+        <div class="dropdown">
+            <button class="dropbtn">&nbsp;&nbsp;User&nbsp;&nbsp;</button>
+            <div class="dropdown-content">
+            <a href="Registration.jsp">Registration</a>
+            <a href="Login.html">Login</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">&nbsp;&nbsp;Admin&nbsp;&nbsp;</button>
+            <div class="dropdown-content">
+            <a href="adminLogin.html">Login</a>
+            </div>
+          </div>
+        
     </div>
     <hr>
     

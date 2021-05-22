@@ -22,7 +22,7 @@ public class updateProfile extends HttpServlet
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clg_project","root","root");
 			Statement st = con.createStatement();
 
-            String q = "update registereduser set NAME='"+s1+"',CONTACT='"+s2+"',EMAIL='"+s3+"',STREET='"+s4+"',CITY='"+s5+"',STATE='"+s6+"',PASSWORD='"+s7+"' ";
+            String q = "update registereduser set NAME='"+s1+"',CONTACT='"+s2+"',STREET='"+s4+"',CITY='"+s5+"',STATE='"+s6+"',PASSWORD='"+s7+"' where EMAIL='"+s3+"'  ";
 			
 			st.executeUpdate(q);
 			

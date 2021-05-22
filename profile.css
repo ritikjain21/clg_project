@@ -101,6 +101,24 @@ body{
 }
 
 /*Nav Tabs & Pills */
+.nav-buttton{
+    margin: 0px 0px 20px 950px;
+}
+
+.nav-buttton a:link, .nav-buttton a:visited {
+    background-color: #0d6dfda6;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 0px 20px 40px;
+  }
+  
+  .nav-buttton a:hover, .nav-buttton  a:active {
+    background-color: #0d6efd;
+  }
+
 .nav-tabs .nav-link {
     color: #223035;
 	font-size: 12px;
@@ -115,6 +133,12 @@ body{
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
 	
+}
+.row{
+    margin-bottom: 8.5px;
+}
+.emailip{
+    margin: 8px 0px 0px 5px;
 }
 .nav-tabs .nav-link:hover{
     border: 1px solid transparent;
