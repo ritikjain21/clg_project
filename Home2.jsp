@@ -32,6 +32,12 @@
 
     <link rel="stylesheet" href="Home.css">
     <title>Document</title>
+    <script>
+        function show()
+        {
+            alert("successfully logged out");
+        }
+    </script>
 </head>
 <body>
     <div class="homeheader">
@@ -42,7 +48,7 @@
             </form>
         </div>
         <div class="btn"><a href="profile.jsp"  >Profile</a></div>
-        <div class="btn"><a href="Logout.jsp">Logout</a></div>
+        <div class="btn"><a href="Logout.jsp" onclick="show()">Logout</a></div>
     </div>
     <hr>
     <div class="hpstore">

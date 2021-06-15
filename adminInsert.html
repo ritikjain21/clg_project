@@ -7,6 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insert Student data</title>
     <link rel="stylesheet" href="adminlogin.css">
+    <script>
+        function validateForm(frm)
+      {
+        let nn=frm.u1.value.trim();
+        if(nn.length==0){
+        alert("Serial Number required");
+        frm.u1.focus();
+        return false;
+        }
+        let mm=frm.u2.value.trim();
+        if(mm.length==0){
+        alert("Book name required");
+        frm.u2.focus();
+        return false;
+        }
+      
+        let oo=frm.u3.value.trim();
+        if(oo.length==0){
+        alert("Book Link required");
+        frm.u3.focus();
+        return false;
+        }
+        let pp=frm.u4.value.trim();
+        if(pp.length==0){
+        alert("Image Link required");
+        frm.u4.focus();
+        return false;
+        }
+      
+        let qq=frm.u6.value.trim();
+        if(qq.length==0){
+        alert(" Author Name required");
+        frm.u6.focus();
+        return false;
+        }
+        return true;
+      }
+    </script>
+
 </head>
 
 <body>
@@ -23,32 +62,32 @@
     </div>
     <div class="data">
         <center>
-            <form action="adminInsert">
+            <form action="adminInsert" onsubmit="return validateForm(this)">
                 <table cellpadding="12px">
                     <tr>
                         <td>Serial N</td>
-                        <td><input type="text" placeholder="SerialNumber" name="u1"></td>
+                        <td><input type="text" id="u1" placeholder="SerialNumber" name="u1"></td>
                     </tr>
                     <tr>
                         <td>Book Name</td>
-                        <td><input type="text" placeholder="Book Name" name="u2"></td>
+                        <td><input type="text" id="u2" placeholder="Book Name" name="u2"></td>
                     </tr>
                     <tr>
                         <td>Book Link</td>
-                        <td><input type="text" placeholder="Book Link" name="u3"></td>
+                        <td><input type="text" id="u3" placeholder="Book Link" name="u3"></td>
                     </tr>
                     <tr>
                     <tr>
                         <td>Image Link</td>
-                        <td><input type="text" placeholder="Image Link" name="u4"></td>
+                        <td><input type="text" id="u4" placeholder="Image Link" name="u4"></td>
                     </tr>
                     <tr>
                         <td>Author</td>
-                        <td><input type="text" placeholder="Author" name="u6"></td>
+                        <td><input type="text" id="u6" placeholder="Author" name="u6"></td>
                     </tr>
                     <tr>
                         <td>Insert Into</td>
-                        <td><input type="radio" value="free" name="u5"> Free <input type="radio" value="paid" name="u5"> Paid </td>
+                        <td><input type="radio" id="u5" value="free" name="u5"> Free <input type="radio" value="paid" name="u5"> Paid </td>
                     </tr>
                     <tr>
                         <th colspan="2"><input type="submit" value=" Insert " class="B"></th>

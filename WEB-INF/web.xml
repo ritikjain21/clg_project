@@ -91,6 +91,16 @@
 <url-pattern>/updateProfile</url-pattern>
 </servlet-mapping>
 
+<servlet>
+<servlet-name>showdp</servlet-name>
+<servlet-class>showdp</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>showdp</servlet-name>
+<url-pattern>/showdp</url-pattern>
+</servlet-mapping>
+
 
 
 </web-app>

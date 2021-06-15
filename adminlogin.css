@@ -47,7 +47,7 @@ body{
     .menu {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    text-align: right;
+    padding: 0px 2px 0px 2px;
 }
 a{
     text-decoration: none;
@@ -55,8 +55,9 @@ a{
 }
 .menu ul li {
     display: inline-block;
-    padding: 12px;
-    margin-left: 5vh;
+    padding: 16px;
+    padding-left: 10px;
+    margin-left: 14vh;
 }
 
 .menu ul li:hover {

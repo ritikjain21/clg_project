@@ -5,6 +5,7 @@
 
   <%@ page import = "java.sql.*" %>
   <%
+  String mail = null;
   try {
     Class.forName("com.mysql.cj.jdbc.Driver");
     Connection con = DriverManager.getConnection(
@@ -17,6 +18,7 @@
     ResultSet rs = st.executeQuery(q);
     if(rs.next())
     {
+      mail = rs.getString("EMAIL");
   %>
 
 
@@ -31,12 +33,25 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="profile.css">
   <title>Profile2</title>
+<script>
+  function show()
+        {
+          if(x)
+          {
+             alert()
+          }
+          else{
+
+          }
+        }
+</script>
+
 </head>
 
 <body>
   <div class="nav-buttton">
     <a href="Home2.jsp" >&nbsp;&nbsp;Back&nbsp;&nbsp; </a>
-    <a href="Logout.jsp" >Logout</a>
+    <a href="Logout.jsp" onclick="show()">Logout</a>
   </div>
   <div class="container">
     <div class="row">
@@ -45,7 +60,21 @@
           <div class="card">
             <div class="card-body text-center bg-primary rounded-top">
               <div class="user-box" id="abc">
-                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user avatar">
+                <%
+                if(rs.getBytes("IMAGE")!=null && rs.getBytes("IMAGE").length!=0)
+                {
+                  %>
+                <img src=<%="showdp?email="+mail%> >
+                <%
+                }
+                else
+                {
+                %>
+                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" >
+                <%
+                }
+                %>
+
               </div>
               <h5 class="mb-1 text-white" id="pName"></h5>
               <h6 class="text-light"> <% if(rs.getString(1)!=null) out.println(rs.getString(1)); %></h6>
@@ -118,7 +147,7 @@
             </ul>
 
             <div class="tab-pane" id="edit">
-              <form action="updateProfile" method="POST" >
+              <form action="updateProfile" method="POST" enctype="multipart/form-data" >
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">First name</label>
                   <div class="col-lg-9">
@@ -143,7 +172,7 @@
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">Change profile</label>
                   <div class="col-lg-9">
-                    <input class="form-control" type="file">
+                    <input class="form-control" type="file" name="u8">
                   </div>
                 </div>
                 <div class="form-group row">
